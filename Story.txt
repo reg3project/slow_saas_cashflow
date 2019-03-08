@@ -1,6 +1,6 @@
 Recurring_Expense_test.csv
 
-"Expense Amount"*"Exchange Rate"
+"Expense Amount"*"Exchange Rate"*(-1)
 repeat for "Repeat Every" / "Recurrence Frequency"
 "Months" "3"
 "Years" "1"
