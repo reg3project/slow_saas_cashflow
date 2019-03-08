@@ -1,0 +1,15 @@
+Recurring_Expense_test.csv
+
+"Expense Amount"*"Exchange Rate"
+repeat for "Repeat Every" / "Recurrence Frequency"
+"Months" "3"
+"Years" "1"
+
+
+Recurring_Invoice_test.csv
+
+"SubTotal"*"Exchange Rate"
+repeat for "Repeat Every" / "Recurrence Frequency"
+"Months" "3"
+"Years" "1"
+
