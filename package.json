@@ -1,0 +1,24 @@
+{
+  "name": "slow_saas_cashflow",
+  "version": "1.0.0",
+  "description": "Recurring Invoices Minus Recurring Expenses From Today To The Future",
+  "main": "slowsaas.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://AhmedMahmoud2012@github.com/reg3project/slow_saas_cashflow.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/reg3project/slow_saas_cashflow/issues"
+  },
+  "homepage": "https://github.com/reg3project/slow_saas_cashflow#readme",
+  "dependencies": {
+    "excel4node": "^1.7.0",
+    "moment": "^2.24.0"
+  }
+}
