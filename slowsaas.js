@@ -1,3 +1,5 @@
+const repeatUntil = new Date("2021-01-10");
+
 const moment = require("moment");
 
 const fsLib = require("fs");
@@ -39,18 +41,33 @@ for (var i = 1, k = 1, l = 2; i < array1.length; i++, k += 2, l += 2) {
     let date = new Date(cols[3]);
     if (cols[1] == "Months") {
       date.setUTCMonth(date.getUTCMonth() + parseInt(cols[2]));
+      while (date <= repeatUntil) {
+        repeatRow(cols, amount, date, l);
+        l++;
+        k++;
+        date.setUTCMonth(date.getUTCMonth() + parseInt(cols[2]));
+      }
     } else if (cols[1] == "Years") {
       date.setFullYear(date.getFullYear() + parseInt(cols[2]));
+      while (date <= repeatUntil) {
+        repeatRow(cols, amount, date, l);
+        l++;
+        k++;
+        date.setFullYear(date.getFullYear() + parseInt(cols[2]));
+      }
     }
-    cols[3] = moment(date).format("YYYY-MM-DD");
-    cols[18] = amount;
-    cols.forEach((itemValue, j) => {
-      workSheet
-        .cell(l, j + 1)
-        .string(itemValue + "")
-        .style(repeatedStyle);
-    });
   }
+}
+
+function repeatRow(cols, amount, date, index) {
+  cols[3] = moment(date).format("YYYY-MM-DD");
+  cols[18] = amount;
+  cols.forEach((itemValue, j) => {
+    workSheet
+      .cell(index, j + 1)
+      .string(itemValue + "")
+      .style(repeatedStyle);
+  });
 }
 
 workbook.write("./Output/output.xlsx");
