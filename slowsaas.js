@@ -28,6 +28,7 @@ fileContent = fileContent.toString();
 var array1 = fileContent.split("\n");
 for (var i = 1, k = 1, l = 2; i < array1.length; i++, k += 2, l += 2) {
   let cols = array1[i].split(",");
+  cols[18] = cols[14] * cols[20];
   // add row items into the output file..
   cols.forEach((itemValue, j) => {
     workSheet
